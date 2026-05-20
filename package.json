@@ -1,0 +1,12 @@
+{
+  "name": "gagi-na-quantum-orbit",
+  "private": true,
+  "version": "1.0.0",
+  "description": "GAGI NA QUANTUM ORBIT — SEABW 2026 hackathon monorepo",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev:api": "npm run dev --prefix backend",
+    "dev:web": "npm run dev --prefix frontend",
+    "build:web": "npm run build --prefix frontend"
+  }
+}

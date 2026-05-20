@@ -1,0 +1,22 @@
+{
+  "name": "gagi-na-quantum-orbit-backend",
+  "version": "1.0.0",
+  "description": "GAGI NA QUANTUM ORBIT API — SEABW 2026",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node scripts/kill-port.cjs && node --watch src/server.js",
+    "dev:clean": "node scripts/kill-port.cjs && node --watch src/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.4",
+    "express": "^4.21.2"
+  }
+}

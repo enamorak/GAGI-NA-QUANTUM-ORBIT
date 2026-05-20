@@ -1,0 +1,44 @@
+# Render Blueprint — GAGI NA QUANTUM ORBIT (SEABW 2026)
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: gagi-orbit-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: CORS_ORIGINS
+        sync: false
+      - key: DATABASE_PATH
+        value: /var/data/orbit.db
+    disk:
+      name: orbit-data
+      mountPath: /var/data
+      sizeGB: 1
+
+  - type: web
+    name: gagi-orbit-web
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          name: gagi-orbit-api
+          type: web
+          property: host
+        # Set manually in dashboard: https://gagi-orbit-api.onrender.com
+      - key: VITE_CONTRACT_ADDRESS
+        sync: false
+      - key: VITE_GITHUB_URL
+        sync: false
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
