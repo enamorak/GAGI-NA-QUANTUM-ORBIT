@@ -9,8 +9,8 @@
 
 **GAGI NA QUANTUM ORBIT** is a decentralized traffic optimization platform that fuses **quantum‑inspired signal control** with **Web3 incentives**. Drivers earn **ORBIT tokens** for sharing anonymous movement data; the orbital engine adapts intersection phases in real time — cutting congestion **20–30%** without building a single new road.
 
-🔗 **Live demo** → [https://gagi-orbit-web.onrender.com](https://gagi-orbit-web.onrender.com)  
-📡 **API** → [https://gagi-orbit-api.onrender.com](https://gagi-orbit-api.onrender.com)  
+🔗 **Live demo** → [https://gagi-na-quantum-orbit-1.onrender.com](https://gagi-na-quantum-orbit-1.onrender.com)  
+📡 **API** → [https://gagi-na-quantum-orbit-1.onrender.com/](https://gagi-na-quantum-orbit-1.onrender.com/)  
 🏆 **Hackathon** → SEABW 2026 Vibe Coding Hackathon – Bangkok
 
 ---
